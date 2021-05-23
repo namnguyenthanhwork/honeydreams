@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap);
+
+:root {
+    --lightblue: #f6f9fc;
+    --red: #d64041;
+    --blue: #007bff;
+    --shadow-color: #7f89a19a;
+}
+
+a,
+a:hover {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg-lightblue {
+    background: var(--lightblue);
+}
+
+.bg-red {
+    background: var(--red);
+    transition: background 0.3s ease-in-out;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    -ms-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+}
+
+.bg-red:hover {
+    background: var(--blue);
+}
+
+.text-red {
+    color: var(--red);
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+}
+
+.container-fluid-max {
+    max-width: 1440px;
+}
+
+.cover {
+    background: no-repeat center/cover;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+/* -------------
+    Prelaoder
+----------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* -------------
+    srcoll
+----------------*/
+
+.scroll .page-header {
+    background: var(--red);
+}
+
+.scroll .hero {
+    transform: scale(0.96);
+    -webkit-transform: scale(0.96);
+    -moz-transform: scale(0.96);
+    -ms-transform: scale(0.96);
+    -o-transform: scale(0.96);
+}
+
+/* -------------
+    Navbar
+----------------*/
+
+.homepage {
+    display: block;
+}
+
+.homepage {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.homepage span {
+    color: var(--lightblue);
+}
+
+/* -------------
+    Header
+----------------*/
+
+.page-header {
+    transition: background 0.5s ease-in-out;
+    -webkit-transition: background 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out;
+    -ms-transition: background 0.5s ease-in-out;
+    -o-transition: background 0.5s ease-in-out;
+}
+
+.page-header .navbar {
+    padding: 1rem 0;
+}
+
+.page-header .navbar-toggler {
+    border-color: var(--white);
+}
+
+/* -----------------
+   Homepage intro
+-------------------*/
+
+.hero {
+    background-image: url(../img/cappadocia.jpg);
+    background-attachment: fixed;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.1) 100%);
+}
+
+.hero .container-fluid {
+    z-index: 10;
+}
+
+/* -----------------------
+    Process
+--------------------------*/
+
+.process_items {
+    position: relative;
+    top: 0;
+    padding: 15px 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    border: 2px solid var(--lightblue);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.process_items:hover {
+    top: -15px;
+    border: 2px solid var(--shadow-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+i {
+    font-size: 25px;
+}
+
+.process_items:hover i.text-red {
+    color: var(--blue);
+
+}
+
+/* -----------------------
+    Popular destinations
+--------------------------*/
+
+.img-fluid {
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* -----------------------
+    Popular destinations
+--------------------------*/
+
+.popular-destinations .figure {
+    margin-bottom: 30px;
+}
+
+.popular-destinations figcaption {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.popular-destinations img {
+    filter: grayscale(100%) blur(3px);
+    transition: transform 0.5s, filter 0.75s;
+    -webkit-filter: grayscale(100%) blur(3px);
+    -webkit-transition: transform 0.5s, filter 0.75s;
+    -moz-transition: transform 0.5s, filter 0.75s;
+    -ms-transition: transform 0.5s, filter 0.75s;
+    -o-transition: transform 0.5s, filter 0.75s;
+}
+
+.popular-destinations a:hover img {
+    transform: scale(1.25);
+    filter: none;
+    -webkit-filter: none;
+}
+
+.page-footer .footer-links {
+    text-align: right;
+}
+
+/* -------------
+    Reponsive
+---------------- */
+
+@media screen and (max-width: 991px) {
+    .page-header {
+        background: var(--red);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-footer .footer-child {
+        text-align: center;
+    }
+}
