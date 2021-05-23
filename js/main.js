@@ -1,28 +1,35 @@
 const $body = $("body");
-const $header = $(".page-header");
-const $navCollapse = $(".navbar-collapse");
 const scrollClass = "scroll";
+const activeHome = 'active';
 
-// Preloader (if the #preloader div exists)
-$(window).on('load', function () {
-    if ($('#preloader').length) {
-        $('#preloader').delay(100).fadeOut('slow', function () {
-            $(this).remove();
-        });
-    }
+// Initiate the wowjs animation library
+var wow = new WOW({
+    boxClass: 'wow', // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset: 100, // distance to the element when triggering the animation (default is 0)
+    mobile: true, // trigger animations on mobile devices (default is true)
+    live: true, // act on asynchronously loaded content (default is true)
+    scrollContainer: null, // optional scroll container selector, otherwise use window
 });
+wow.init();
 
 // active nav link when scroll
 $(window).on("scroll", () => {
     if (this.matchMedia("(min-width: 992px)").matches) {
         const scrollY = $(this).scrollTop();
-        scrollY > 0 ?
-            $body.addClass(scrollClass) :
+        if (scrollY > 0) {
+            $body.addClass(scrollClass);
+            $('.homepage span').addClass(activeHome);
+        } else {
             $body.removeClass(scrollClass);
+            $('.homepage span').removeClass(activeHome);
+        }
     } else {
         $body.removeClass(scrollClass);
+        $('.homepage span').removeClass(activeHome);
     }
 });
+
 // scroll top
 $(".page-header .nav-link, .navbar-brand").on("click", function (e) {
     e.preventDefault();
