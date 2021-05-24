@@ -28,6 +28,18 @@ $(window).on("scroll", () => {
         $body.removeClass(scrollClass);
         $('.homepage span').removeClass(activeHome);
     }
+
+    if (this.scrollY > 30) {
+        $(".navbar img:first-child").addClass("un-active"),
+            $(".navbar img:first-child").removeClass("active"),
+            $(".navbar img:last-child").addClass("active"),
+            $(".navbar img:last-child").removeClass("un-active");
+    } else {
+        $(".navbar img:first-child").addClass("active"),
+            $(".navbar img:first-child").removeClass("un-active"),
+            $(".navbar img:last-child").addClass("un-active"),
+            $(".navbar img:last-child").removeClass("active");
+    }
 });
 
 // scroll top

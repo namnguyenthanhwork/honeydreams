@@ -78,6 +78,8 @@ a:hover {
 
 .homepage {
     display: block;
+    width: 85px;
+    height: 42px;
 }
 
 .homepage {
@@ -121,6 +123,14 @@ a:hover {
 
 .page-header .navbar-toggler {
     border: 2px solid var(--white);
+}
+
+.navbar img.un-active {
+    display: none;
+}
+
+.navbar img.active {
+    display: block;
 }
 
 /* -----------------
