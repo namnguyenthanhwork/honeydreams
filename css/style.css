@@ -114,6 +114,7 @@ a:hover {
 ----------------*/
 
 .page-header {
+    padding: 5px 0;
     transition: background 0.5s ease-in-out;
     -webkit-transition: background 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out;
